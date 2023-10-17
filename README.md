@@ -3,11 +3,11 @@
 
 ## Atualize os seus dados
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Luís Guilherme Lopes Aguiar
+- Matrícula: 19.1.8025
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 2023/2
+- Link para o seu GitHub: https://chat.whatsapp.com/Km1zJNeCRn74yLdfafmFoY
 
 ## [Projeto final:](./Projeto/README.md)
 
