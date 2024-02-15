@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form method="post" class="form_content">
+            <div>
+                <label for="first_name">Primeiro Nome:</label>
+                <input type="text" id="first_name" name="first_name">
+            </div>
+
+            <div>
+                <label for="last_name">Último nome:</label>
+                <input type="text" id="last_name" name="last_name">
+            </div>
+
+            <div>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div>
+                <label for="repeat_password">Repita a senha:</label>
+                <input type="password" id="repeat_password" name="repeat_password">
+            </div>
+
+            <div class="form_date">
+                <label for="born_date">Data de nascimento:</label>
+                <input type="date" id="born_date" name="born_date">
+            </div>
+
+            <div class="checkbox_form_content_label">
+                <label for="gender">Gênero:</label>
+                <div>
+                    <input type="radio" id="f_gender" name="gender" value="Feminino">
+                    <label for="f_gender">Feminino</label>
+                </div>
+                <div>
+                    <input type="radio" id="m_gender" name="gender" value="Masculino">
+                    <label for="m_gender">Masculino</label>
+                </div>
+                <div>
+                    <input type="radio" id="o_gender" name="gender" value="Outro">
+                    <label for="o_gender">Outro</label>
+                </div>
+
+            </div>
+            <div>
+                <button onclick="enviar()">Enviar</button>
+            </div>
+        </form>
+    </div>
+<script>
+    function enviar(){
+        let nome = document.getElementById("first_name").value;
+        let sobrenome = document.getElementById("last_name").value;
+        let senha1 = document.getElementById("password").value;
+        let senha2 = document.getElementById("repeat_password").value;
+        let nasc = document.getElementById("born_date").value;
+        let genero = document.querySelector("[name='gender']:checked").value;
+        let alertContent = "Bem vind";
+        if(genero=="Masculino") alertContent+="o";
+        else if(genero=="Feminino") alertContent+="a";
+        else alertContent="Olá";
+        alertContent+=", "+nome+" "+sobrenome+"!";
+        if(senha1!==senha2) alertContent+="\nSuas senhas não são iguais!\n";
+        else alertContent+="\nSua senha foi verificada.\n";
+        alert(alertContent);        
+    };
+</script>
+</body>
+
+</html>
