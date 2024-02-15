@@ -7,7 +7,7 @@
 - Matrícula: 19.1.8025
 - Curso: Sistemas de Informação
 - Semestre/Ano correntes: 2023/2
-- Link para o seu GitHub: https://chat.whatsapp.com/Km1zJNeCRn74yLdfafmFoY
+- Link para o seu GitHub: https://github.com/LGuilhermeAg
 
 ## [Projeto final:](./Projeto/README.md)
 
