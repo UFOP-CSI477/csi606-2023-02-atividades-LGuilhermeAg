@@ -1,3 +1,6 @@
+<?php
+    $url = $_SERVER['REQUEST_URI'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <title>Bendita Limpeza - Serviços e Conservação</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-32x32.png">
-    <link rel="stylesheet" href="CSS/bootstrap.min.css">
-    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/ico/favicon-32x32.png">
+    <link rel="stylesheet" href="../public/CSS/bootstrap.min.css">
+    <link href="../public/CSS/style.css" rel="stylesheet">
+    <!-- <link href="../public/CSS/style-calendar.css" rel="stylesheet"> -->
     <!-- <link href="css/cssi.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
@@ -30,10 +34,7 @@
             let screen = document.getElementById("section1");
             header.classList.toggle('navWhite', window.scrollY > 600);
         })
-
-        function stickyNav() {
-          
-        }
+        
         </script>
     
 </head>
@@ -44,7 +45,7 @@
         <ul class="nav1" id="Nav">
             <!-- <li><a href="#section1">Home</a></li> -->
             <li><a href="#sectionAbt2">Sobre Nós</a></li>
-            <!-- <li><a href="#section2">Valores</a></li> -->
+            <li><a href="#section2">Valores</a></li>
             <li><a href="#section4">Perguntas Frequentes</a></li>
             <li><a href="#section3">Nos Acompanhe!</a></li>
             <li><a href="#contact" onclick="document.getElementById('id01').style.display='block'">Faça Um Orçamento!</a></li>
@@ -54,7 +55,7 @@
     <header class="navbar2" style="z-index:12;background-color:white;">
         <span onclick="document.getElementById('id02').style.display='block'"
             class="w3-button w3-display-topleft" style="font-size: 3rem;">☰</span>
-        <center><a class="" href="#" id=""><img src="img/bendita-logo.jpg"></a></center>
+        <center><a class="" href="#" id=""><img src="public/img/bendita-logo.jpg"></a></center>
     </header>
     <div id="id02" class="w3-modal" style="overflow-x: hidden; z-index: 13;">
     <div class="w3-modal-content">
@@ -169,7 +170,7 @@
 
     <section id="section2">
 
-        <div class="container" style="">
+        <div class="container">
             <div class="row" style="margin-bottom: 5%;">
                 <div class="col-md-4" style="padding-top: 5%;">
                     <div class="card-novo"> 
@@ -199,13 +200,20 @@
                     </div> 
                 </div>
             </div>
+        <!-- </div>
+        <div class="container"> -->
+            <center>
+                <h1>Solicite um serviço</h1>
+                <h3>E nossos administradores reservarão o melhor profissional para você</h3>
+                <hr style="width: 15%">
+                <a class="w3-button btn-calendar" href="<?=$url?>login" target="_blank">Acesse nosso calendário</a>
+            </center>
         </div>
-
         <div class="waveSpacer layer2"></div>
     </section>
     
     <section id="section4">
-        <div class="faq" style="">
+        <div class="faq">
             <div>
                 <center>
                     <h1>Perguntas Frequentes</h1>
@@ -356,7 +364,8 @@ function myAccFunc(id) {
 
 
 </script>
-
+<script src="../public/singleton.js"></script>
+<script src="../public/script.js"></script>
 
 </body>
 </html>

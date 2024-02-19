@@ -254,7 +254,7 @@ body{
 	/*background-image: linear-gradient(var(--azulEscuro),var(--azulClaro),white,white);*/
 	height: 100vh;
 	position: relative;
-	background-image: url("../diarista.jpg");
+	background-image: url("../../diarista.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	/*background-color: var(--azulEscuro);*/
@@ -332,11 +332,11 @@ body{
 }
 
 .layer1{
-	background-image: url('../layer3.svg');
+	background-image: url('../../layer3.svg');
 }
 
 .layer2{
-	background-image: url('../layer3.svg');
+	background-image: url('../../layer3.svg');
 	transform: rotate(180deg);
 	bottom: -20%;
 }
@@ -488,7 +488,7 @@ https://www.youtube.com/watch?v=5DEq5cWNYt8
 */
 
 .card-novo{
-	background-image: url("../diarista.jpg");
+	background-image: url("../../diarista.jpg");
 	color: white;
 	background-size: cover;
 	padding: 8rem 0 0 0;
@@ -762,6 +762,31 @@ https://www.youtube.com/watch?v=8b2mTq0Xrtw&list=TLPQMDcwNjIwMjENJnFxijIxXQ&inde
 	background-image: linear-gradient(to top left,#002296,#82008f,#C0007a,#ea0c5f,#ff5341) !important;
 	transition: .3s;
 }
+
+.btn-calendar:hover{
+	text-decoration: none;
+	background-image: linear-gradient(to top left,var(--azulEscuro),var(--azulClaro)) !important;
+	color:whitesmoke !important;
+	transition: .3s;
+	box-shadow: 2px 0px 35px #0894B8aa;
+}
+
+.btn-calendar:focus{
+	text-decoration: none;
+	color: unset;
+}
+
+.btn-calendar{
+	border-radius: 5px;
+	border: none;
+	background-color: var(--azul5);
+	font-size: 1.7em;
+	margin: 5px;
+	color: white;
+	font-weight: bold;
+	padding: .75em 2em;
+	transition: .3s;
+}
 /*
 .pre-footer .layer2{
 	background-image: url('../layer3.svg');
@@ -944,11 +969,11 @@ svg:hover{
 }
 
 .layer1{
-	background-image: url('../layer3.svg');
+	background-image: url('../../layer3.svg');
 }
 
 .layer2{
-	background-image: url('../layer3.svg');
+	background-image: url('../../layer3.svg');
 	transform: rotate(180deg);
 	bottom: -20%;
 }

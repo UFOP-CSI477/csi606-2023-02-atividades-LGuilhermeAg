@@ -1,0 +1,22 @@
+{
+  "name": "atividade-pratica-01",
+  "version": "1.0.0",
+  "description": "Atividade Pratica 01",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js"
+  },
+  "author": "Luís Guilherme Lopes Aguiar <luis.aguiar@aluno.ufop.edu.br>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@prisma/client": "^5.9.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "prisma": "^5.9.1"
+  }
+}

@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model TipoSanguineo {
+  id         Int       @id @default(autoincrement())
+  tipo       String
+  fator      String
+  created_at DateTime  @default(now())
+  updated_at DateTime?
+  Pessoa     Pessoa[]
+}
+
+model Estado {
+  id         Int       @id @default(autoincrement())
+  nome       String
+  sigla      String
+  created_at DateTime  @default(now())
+  updated_at DateTime?
+  Cidade     Cidade[]
+}
+
+model Cidade {
+  id          Int           @id @default(autoincrement())
+  nome        String
+  estado      Estado        @relation(fields: [estado_id], references: [id])
+  estado_id   Int
+  created_at  DateTime      @default(now())
+  updated_at  DateTime?
+  Pessoa      Pessoa[]
+  LocalColeta LocalColeta[]
+}
+
+model Pessoa {
+  id          Int           @id @default(autoincrement())
+  nome        String
+  rua         String
+  numero      String
+  complemento String?
+  rg          String
+  cidade      Cidade        @relation(fields: [cidade_id], references: [id])
+  cidade_id   Int
+  tipo        TipoSanguineo @relation(fields: [tipo_id], references: [id])
+  tipo_id     Int
+  created_at  DateTime      @default(now())
+  updated_at  DateTime?
+  doacoes     doacoes[]
+}
+
+model LocalColeta {
+  id          Int       @id @default(autoincrement())
+  nome        String
+  rua         String
+  numero      String
+  complemento String?
+  cidade      Cidade    @relation(fields: [cidade_id], references: [id])
+  cidade_id   Int
+  created_at  DateTime  @default(now())
+  updated_at  DateTime?
+  doacoes     doacoes[]
+}
+
+model doacoes {
+  id         Int         @id @default(autoincrement())
+  pessoa     Pessoa      @relation(fields: [pessoa_id], references: [id])
+  pessoa_id  Int
+  local      LocalColeta @relation(fields: [local_id], references: [id])
+  local_id   Int
+  data       DateTime
+  created_at DateTime    @default(now())
+  updated_at DateTime?
+}
